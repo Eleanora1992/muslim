@@ -1,0 +1,370 @@
+<html>
+  <head>
+    <title>Growth of Islam</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.0.1/css/ol.css" type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.0.1/build/ol.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+      #map {
+        position: relative;
+      }
+
+      .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+    </style>
+
+  </head>
+  <body>
+
+  <h2>Growth of Islam</h2>
+<p>Click on the button to open the dropdown menu, and select a date.</p>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a id = Overview onclick="window.open('https://www.youtube.com/watch?v=PFSin5Gctv8')">Overview</a>
+    <a id = 570 href="#570">570</a>
+    <a id = 610 href="#610">610</a>
+    <a id = 620 href="#620">620</a>
+    <a id = 622 href="#622">622</a>
+    <a id = 631 href="#631">631</a>
+    <a id = 632 href="#632">632</a>
+    <a id = 634 href="#634">634</a>
+    <a id = 644 href="#644">644</a>
+    <a id = 656 href="#656">656</a>
+    <a id = 680 href="#680">680</a>
+    <a id = 750 href="#750">750</a>
+    <a id = 1000 href="#1000">1000</a>
+    <a id = 1250 href="#1250">1250</a>
+    <a id = 1492 href="#1492">1492</a>
+    <a id = 1500 href="#1500">1500</a>
+    <a id = 1700 href="#1700">1700</a>
+  </div>
+</div>
+
+    <div id="map" class="map"><div id="popup" style="width: 500px"></div></div>
+    <script>
+
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+
+
+  var iconFeature = new ol.Feature({
+    geometry: new ol.geom.Point([0, 0]),
+  });
+
+var projection = ol.proj.get('EPSG:3857');
+  var year570 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/570doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year610 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/610doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year620 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/620doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year622 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/622doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year631 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/631doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+  var year632 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/632doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year634 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/634doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year644 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/644doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year656 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/656doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year680 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/680doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year750 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/750doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year1000 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/1000doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year1250 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/1250doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year1492 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/1492doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year1500 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/1500doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+ var year1700 = new ol.layer.Vector({
+        source: new ol.source.Vector({
+        projection: projection,
+        url: '/static/my_first_app/1700doc.kml',
+        format: new ol.format.KML()
+      })
+    });
+
+  var iconStyle = new ol.style.Style({
+    image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
+      anchor: [0.5, 46],
+      anchorXUnits: 'fraction',
+      anchorYUnits: 'pixels',
+      src: 'https://openlayers.org/en/v4.0.1/examples/data/icon.png'
+    }))
+  });
+
+  iconFeature.setStyle(iconStyle);
+
+  var vectorSource = new ol.source.Vector({
+    features: [iconFeature]
+  });
+
+  var vectorLayer = new ol.layer.Vector({
+    source: vectorSource
+  });
+
+  var rasterLayer = new ol.layer.Tile({
+    source: new ol.source.TileJSON({
+      url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
+      crossOrigin: ''
+    })
+  });
+
+
+
+  var map = new ol.Map({
+    layers: [rasterLayer],
+    target: document.getElementById('map'),
+    view: new ol.View({
+      center: [0, 0],
+      zoom: 3
+    })
+  });
+
+
+  var element = document.getElementById('popup');
+
+  var popup = new ol.Overlay({
+    element: element,
+    positioning: 'center',
+    stopEvent: false,
+    offset: [0, -20]
+      });
+  map.addOverlay(popup);
+
+  // display popup on click
+  map.on('click', function(evt) {
+    var feature = map.forEachFeatureAtPixel(evt.pixel,
+        function(feature) {
+          return feature;
+        });
+    if (feature) {
+      var coordinates = feature.getGeometry().getCoordinates();
+      popup.setPosition(coordinates);
+      $(element).popover({
+        'placement': 'top',
+        'html': true,
+        'content': feature.get('description')
+      });
+      $(element).popover('show');
+    } else {
+      $(element).popover('destroy');
+    }
+  });
+
+  // change mouse cursor when over marker
+  map.on('pointermove', function(e) {
+    if (e.dragging) {
+      $(element).popover('destroy');
+      return;
+    }
+    var pixel = map.getEventPixel(e.originalEvent);
+    var hit = map.hasFeatureAtPixel(pixel);
+    map.getTarget().style.cursor = hit ? 'pointer' : '';
+      });
+
+var lastUsedLayer = -1;
+
+var layoutDictionary = {
+    570: year570,
+    610: year610,
+    620: year620,
+    622: year622,
+    631: year631,
+    632: year632,
+    634: year634,
+    644: year644,
+    656: year656,
+    680: year680,
+    750: year750,
+    1000: year1000,
+    1250: year1250,
+    1492: year1492,
+    1500: year1500,
+    1700: year1700
+};
+
+$('#myDropdown').click(function(event){
+    if (event.target.id != "Overview") {
+        var layer = layoutDictionary[event.target.id];
+        map.addLayer(layer);
+        if (lastUsedLayer != -1) {
+            $(element).popover('destroy');
+            map.removeLayer(lastUsedLayer);
+            }
+        lastUsedLayer = layer;
+    }
+    myFunction();
+});
+
+
+    </script>
+  </body>
+</html>

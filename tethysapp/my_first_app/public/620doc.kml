@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd http://www.google.com/kml/ext/2.2 http://code.google.com/apis/kml/schema/kml22gx.xsd">
+<Document id="620">
+  <name>620</name>
+  <Snippet></Snippet>
+  <Folder id="FeatureLayer0">
+    <name>620</name>
+    <Snippet></Snippet>
+    <Placemark id="ID_00000">
+      <name>0</name>
+      <Snippet></Snippet>
+      <description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:14px;text-align:left;width:100%;padding:6px 6px 6px 6px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Year 620</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:14px;text-align:left;width:100%;border-spacing:10px; padding:6px 6px 6px 6px">
+
+
+<tr>
+
+<td width="50%">Date :</td>
+
+<td width="50%">620 CE</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td width="50%">Facts :</td>
+
+<td width="50%">Muhammad’s night journey from Mecca to Jerusalem</td>
+
+</tr>
+
+
+<tr>
+    <td>URL :</td>
+    <td><a onclick="window.open('http://www.islamicity.org/5843/isra-and-miraj-the-miraculous-night-journey/')" >click here</a></td>
+</tr>
+
+
+</table>
+
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
+
+]]></description>
+      <styleUrl>#LineStyle00</styleUrl>
+      <MultiGeometry>
+        <LineString>
+          <extrude>0</extrude><altitudeMode>clampToGround</altitudeMode>
+          <coordinates> 35.19965385556924,31.7852576567161,0 39.81979937758816,21.4308849102746,0</coordinates>
+        </LineString>
+      </MultiGeometry>
+    </Placemark>
+  </Folder>
+  <Style id="LineStyle00">
+    <LabelStyle>
+      <color>00000000</color>
+      <scale>0.000000</scale>
+    </LabelStyle>
+    <LineStyle>
+      <color>ff899e00</color>
+      <width>2</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>ff000000</color>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+</Document>
+</kml>
